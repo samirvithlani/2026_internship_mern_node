@@ -1,0 +1,11 @@
+
+frontend -->
+backend 
+  
+  backend --> cmd --> npm init --y
+  code .
+
+javascript
+
+module : ec6 -> import
+ec5 --> require("")
