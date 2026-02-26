@@ -9,3 +9,36 @@ javascript
 
 module : ec6 -> import
 ec5 --> require("")
+
+MERN: mongo db
+express js middleware fw
+react
+node
+
+NODE JS + EXPRESS --> apis
+
+without express *** -->API
+NODE builting module HTTP
+
+npm i express
+
+web server /application:
+
+phyc...machine --> web servver [request,response] --> application -->
+
+HOT RELOAD : server auto start
+
+node app.js -->
+
+dev tools:
+npm i nodemon -g 
+or 
+npm i nodemon --dev
+macbook
+
+sudo npm i nodemon -g 
+or
+npm i nodemon --dev
+
+server start 
+nodemon app.js
