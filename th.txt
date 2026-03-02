@@ -128,3 +128,17 @@ models : mongodb database collection -> 1 model -->
 Naming Con:
 UserController
 user_controller
+
+
+MONGODB DATABASE :
+2 package:
+1)mongob package  :
+    native
+    colllection , database manual,
+2)mongoose package: 
+   orm tool :
+   collection ,type safe,data base..
+   
+UserModel will bind with one colletion of our database...   
+
+npm i mongoose
