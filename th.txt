@@ -142,3 +142,18 @@ MONGODB DATABASE :
 UserModel will bind with one colletion of our database...   
 
 npm i mongoose
+
+
+delete userModel,userCOntroller,UserRoutesand remove require from app.js for user routes
+
+Dbconnection
+
+productModel:
+productCOntroller
+productroutes
+
+app.js
+
+
+
+

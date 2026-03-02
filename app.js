@@ -8,17 +8,12 @@ dbConnection() //calling function...
 
 
 
-//require all routes
-const userRoutes = require("./src/routes/UserRoutes")
-//use routes in express
-//http://localhost:3000/urls
-//app.use(userRoutes)
-//http://localhost:3000/user/urls
-app.use("/user",userRoutes)
-
 const employeeRoutes = require("./src/routes/EmployeeRoutes")
 app.use("/emp",employeeRoutes)
 
+
+const productRoutes = require("./src/routes/ProductRoutes")
+app.use("/prod",productRoutes)
 
 
 
