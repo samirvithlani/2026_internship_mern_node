@@ -154,6 +154,27 @@ productroutes
 
 app.js
 
+get : data send -->front
+post :data get <<--- front
+put
+delete
+
+------------------>
+JSON --> object
+data --> request 
+req.params -->url
+req.body --> object...
+
+
+
+getProductById -> params --> findById
+createProduct -->body --> create 
+NOte: app.js --> express.json() -->to accept json data type as object..
+
+-------------------------------------------------------------->
+
+delete:
+
 
 
 

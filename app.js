@@ -2,9 +2,9 @@
 const express = require("express"); //express module
 //create an object of express
 const app = express();
+app.use(express.json()) //global middleware --> it will accept json data..
 const dbConnection = require("./src/utils/DBConnection")
 dbConnection() //calling function...
-
 
 
 
