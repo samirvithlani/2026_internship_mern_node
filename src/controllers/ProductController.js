@@ -26,13 +26,31 @@ const getProductById = async (req, res) => {
   }
 };
 
+// const addProduct = async (req, res) => {
+//   //console.log("body...",req.body)
+
+//   const savedProduct = await productSchema.create(req.body);
+//   res.status(201).json({
+//     message: "product saved",
+//     data: savedProduct,
+//   });
+// };
+
 const addProduct = async (req, res) => {
   //console.log("body...",req.body)
-  const savedProduct = await productSchema.create(req.body);
-  res.status(201).json({
-    message: "product saved",
-    data: savedProduct,
-  });
+  try {
+    const savedProduct = await productSchema.create(req.body);
+    res.status(201).json({
+      message: "product saved",
+      data: savedProduct,
+    });
+    
+  } catch (err) {
+    res.status(500).json({
+      message:"error while creating product",
+      err:err
+    })
+  }
 };
 
 const deleteProduct = async (req, res) => {
@@ -56,9 +74,45 @@ const deleteProduct = async (req, res) => {
   }
 };
 
+const updateProduct = async (req, res) => {
+  //update products ,,, where id =?
+  //db.products.updateOne({$set:{,,,},{_id:?}})
+  //new data to update : req.body
+  //where ?? id : req.params
+
+  //const updatedObj = await productSchema.findByIdAndUpdate(req.params.id,req.body)
+  const updatedObj = await productSchema.findByIdAndUpdate(
+    req.params.id,
+    req.body,
+    { new: true },
+  );
+  res.status(200).json({
+    message: "data updated..",
+    data: updatedObj,
+  });
+};
+
+
+const searchProduct = async(req,res)=>{
+
+
+  const searchParam = req.query;
+  //name --> find that name from database..
+  //productSchema.find({productName:req.query.name})
+  console.log("req.query",searchParam)
+
+  res.json({
+    message:"searching...."
+  })
+
+
+}
+
 module.exports = {
   getAllProducts,
   getProductById,
   addProduct,
   deleteProduct,
+  updateProduct,
+  searchProduct
 };

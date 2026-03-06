@@ -172,9 +172,36 @@ createProduct -->body --> create
 NOte: app.js --> express.json() -->to accept json data type as object..
 
 -------------------------------------------------------------->
-
 delete:
 
 
+update:
+add color to product :
+req.body.color
+req.params.id
+findByIdAndUpdate(id,$push:{colors:req.body.color})
+
+remove color
+findByIdAndUpdate(id,$pull:{colors:req.body.color})
+
+productCOntroller :
+
+const addColor = ()...=>{}
+const removeColor =()=>{}
+put..
 
 
+
+req.body: object
+req.parasm : url /
+req.query : ?key:value   -->search
+
+req.query
+
+url?a=100   
+
+first param append with ?
+aftter 1st param all param goes with &
+
+
+update:
